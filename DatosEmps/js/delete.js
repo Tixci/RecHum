@@ -48,7 +48,7 @@ function dlt(id){
     .then(function(res) {
         console.log(res);
         alert(`${res.data.message}`);
-        window.location.href("empleados.html");
+        window.location.href = ("empleados.html");
     }).catch(function(err) {
         console.log(err);
     })

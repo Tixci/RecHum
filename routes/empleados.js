@@ -22,7 +22,7 @@ empleados.post("/", async (req, res, next) => {
 });
 
 empleados.delete('/:id([0-9]{1,3})', async (req, res, next) => {
-    const query = `DELETE FROM empleaods WHERE id=${req.params.id}`;
+    const query = `DELETE FROM empleados WHERE id=${req.params.id}`;
     const rows = await db.query(query);
     if(rows.affectedRows == 1){
         return res.status(200).json({code: 200, message: "Empleado borrado correctamente"});
@@ -34,8 +34,8 @@ empleados.put('/:id([0-9]{1,3})', async (req, res, next) => {
     const { nombre, apellidos, telefono, correo, direccion } = req.body;
     
     if(nombre && apellidos && telefono && correo && direccion){
-        let query = `UPDATE pokemon SET nombre='${nombre}',apellidos=${apellidos},`;
-        query += `telefono=${telefono},correo=${correo},direccion=${direccion} WHERE id=${req.params.id}`;
+        let query = `UPDATE empleados SET nombre='${nombre}',apellidos='${apellidos}',`;
+        query += `telefono=${telefono},correo='${correo}',direccion='${direccion}' WHERE id=${req.params.id}`;
 
         const rows = await db.query(query);
     

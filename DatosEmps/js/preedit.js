@@ -31,22 +31,16 @@ function loadEmpleados() {
 function displayEmpleados(empleados) {
     var body = document.querySelector("body");
     for(var i = 0; i < empleados.length; i++) {
-        body.innerHTML += `<h3>${empleados[i].nombre} ${empleados[i].apellidos} ${empleados[i].telefono} ${empleados[i].correo}<h3>`;
+        body.innerHTML += `<h3>${empleados[i].id} ${empleados[i].nombre} ${empleados[i].apellidos} ${empleados[i].telefono} ${empleados[i].correo}<h3>`;
     }
-
-    document.querySelector('.btn-secondary').addEventListener('click', function() {
-        var search = document.getElementById('input-search').value;
-        localStorage.setItem("search", search);
-        window.location.href = "datosemp.html"
+    
+    document.querySelector('.btn-secondary').addEventListener('click', function(){
+        var id = document.getElementById('input-edit').value;
+        localStorage.setItem("search", id);
+        window.location.href = "edit.html";
     });
 
     document.querySelector('.btn-primary').addEventListener('click', function() {
-        window.location.href = "form.html"
-    });
-    document.querySelector('.btn-dlt').addEventListener('click', function() {
-        window.location.href = "delete.html"
-    });
-    document.querySelector('.btn-edit').addEventListener('click', function() {
-        window.location.href = "preedit.html"
+        window.location.href = "empleados.html";
     });
 }
