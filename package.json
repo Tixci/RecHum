@@ -1,0 +1,35 @@
+{
+  "name": "express-workshop",
+  "version": "1.0.0",
+  "description": "An API REST using express.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tixci/express_workshop.git"
+  },
+  "keywords": [
+    "api",
+    "rest",
+    "express",
+    "nodejs"
+  ],
+  "author": "Andres Trejo, Andrea Orduño, Eduardo Leal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tixci/express_workshop/issues"
+  },
+  "homepage": "https://github.com/Tixci/express_workshop#redme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
